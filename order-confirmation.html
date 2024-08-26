@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <link rel="stylesheet" href="order-confirmation.css">
+</head>
+<body>
+    <h1>Place Your Order</h1>
+    <form id="order-form">
+        <label for="table-number">Table Number:</label>
+        <input type="text" id="table-number" name="table-number"><br>
+
+        <label for="food-name">Food Name:</label>
+        <select id="food-name" name="food-name">
+            <option value="" data-price="0">Select Food</option>
+            <option value="Pizza" data-price="200">Pizza - ₹200</option>
+            <option value="Burger" data-price="150">Burger - ₹150</option>
+            <option value="Pasta" data-price="180">Pasta - ₹180</option>
+            <option value="Momos" data-price="55">Momos - ₹55</option>
+            <option value="mug pulao" data-price="30">Mug polao - ₹30</option>
+            <option value=" puff" data-price="15">  puff - ₹15</option>
+            <option value="Hot&spicy
+            paneer-chilli" data-price="75"> Hot&spicy
+              paneer-chilli - ₹75</option>
+            <option value="spicy puff" data-price="45"> spicy puff - ₹45</option>
+          </select><br>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1"><br>
+
+        <label for="phone-number">Phone Number:</label>
+        <input type="text" id="phone-number" name="phone-number"><br>
+
+        <label for="payment-method">Payment Method:</label>
+        <select id="payment-method" name="payment-method">
+            <option value="cash">Cash</option>
+            <option value="online">Online</option>
+            <option value="card">Card</option>
+            <option value="upi">UPI</option>
+        </select><br>
+
+        <button type="submit" id="submit-order">Submit Order</button>
+    </form>
+
+    <div id="order-confirmation-message"></div>
+    <div id="orderNow"></div>
+
+    <script src="order-confirmation-script.js"></script>
+</body>
+</html>
+

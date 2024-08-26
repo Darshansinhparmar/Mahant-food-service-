@@ -1,0 +1,255 @@
+/* @keyframes slideINLeft{
+    from{
+        transform: translateX(-300px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+.slideInLeft{
+    animation: slideInLeft 2s ease-in;
+} */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.secondary {
+    color: rgba(245, 133, 93, 0.839);
+}
+
+img-responsive {
+    width: 100%;
+}
+
+h2 {
+    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    ;
+}
+
+p {
+   
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(225, 246, 162);
+}
+button {
+
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    padding: 2.4%;
+    background-image: linear-gradient(to right, blue, rgb(243, 70, 70));
+    border-radius: 23px;
+    cursor: pointer;
+    border: transparent;
+}
+
+button:hover {
+    background-image: linear-gradient(to right, blue, rgb(243, 70, 70));
+}
+
+button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/*  uiversal end*/
+
+/* for nav selection start*/
+.navBar {
+    
+    position: sticky;
+    top: 0;
+    background-color: rgba(139, 235, 234, 0.574);
+    ;
+    padding-bottom: 1%;
+}
+
+.topNav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    height: 10vh;
+}
+
+.navBar a {
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.topNav.logo a {
+    color: #111;
+    font-weight: 900;
+    letter-spacing: 0.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.topNav .logo a span {
+    color: rgb(229, 101, 72)
+}
+
+.topNav .navItems {
+    margin-right: 1%;
+}
+
+.topNav .navItems a {
+    margin-right: 1em;
+    color: #111
+}
+
+.topNav .navItems a:hover {
+       color: rgb(0, 255, 26);
+}
+
+/* <!-- nav seclection end --> */
+.welcomeMain .welcomeLeft {
+    padding-top: 10%;
+    width: 50%;
+}
+
+.welcomeMain .welcomeRight {
+    width: 50%;
+}
+
+.welcomeMain .welcomeRight img {
+    max-width: 500%;
+    max-height: 100vh;
+}
+
+.welcomeLeft h1 {
+    font-size: 2em;
+    padding-bottom: 3%;
+    letter-spacing: 2px;
+    font-weight: 800;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.welcomeLeft h1 span{
+    color:rgb(248, 167, 227);
+}
+
+.welcomeLeft p{
+    color : gray;
+    padding-bottom: 7%;
+}
+/* welcome section end and about section start */
+
+section.about{
+    background-image: url('https://www.foodiesfeed.com/wp-content/uploads/2019/02/messy-pizza-on-a-black-table.jpg');
+    background:no-repeat;
+    background : cover;
+}
+
+.aboutMain{
+    display: flex;
+    margin:0.5%;
+    margin-top:10%;
+}
+
+.aboutMain .aboutLeft{
+    width: 50%;
+    margin-top: 10%;
+
+}
+
+.aboutMain .aboutRight{
+    width: 50%;
+    margin-top: 10%;
+}
+.aboutMain .aboutRight h1{
+    padding-bottom: 4%;
+}
+.aboutMain .aboutRight p{
+    padding-bottom: 10%;
+}
+
+.aboutMain .aboutLeft img {
+    max-width: 100%;
+    max-height: 80vh;
+    /* width: 100px; */
+}
+
+/* About Section End  start recipies section here*/
+
+.recipies{
+    margin-top : 5%;
+}
+
+.recipieControl{
+    display:flex;
+}
+
+.recBox{
+    padding: 5%;
+    margin: 5%;
+    box-shadow: 5px 10px 10px 5px rgb(220, 76, 36);
+    border-radius: 4%;
+}
+
+.recBox img{
+   animation: "slideInLeft" ;
+    max-width: 100%;
+    margin-bottom: 20%;
+}
+
+/* recipies section end   noe status bar start*/
+.statusBar{
+    margin : 4% 2%;
+    padding: 3%;
+    /* box-shadow: 10px 10px 10px 10px rgb(220, 76, 36) ; */
+    border-radius: 20px;
+}
+.statusMain{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Food Setcion End */
+/* footer Start */
+section.footer{
+    background-color: #111;
+    margin-top: 5%;
+
+}
+.footer h1 span{
+    color: orange;
+}
+.footer h1{
+    color: gray;
+    padding-top: 3%;
+}
+
+.footer h3{
+    color: #fff;
+    padding: 2% 0;
+}
+
+
+
+.foodsControl{
+    display:flex;
+}
+
+.foodBox{
+    display: flex;
+    padding: 5%;
+    margin: 5%;
+    box-shadow: 5px 10px 10px 5px rgb(220, 76, 36);
+    border-radius: 4%;
+}
+
+.foosBox img{
+    display: flex;
+    max-width: 100%;
+    margin-bottom: 20%;
+}
