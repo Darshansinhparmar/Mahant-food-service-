@@ -1,255 +1,443 @@
-/* @keyframes slideINLeft{
-    from{
-        transform: translateX(-300px);
-    }
-    to{
-        transform: translateX(0);
-    }
-}
-.slideInLeft{
-    animation: slideInLeft 2s ease-in;
-} */
-* {
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
-body {
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    background-color: #f8f9fa;
 }
 
-.text-center {
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar styling */
+.navBar {
+    background-color:rgb(69, 215, 241);
+     color:#191b1d;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgb(240, 18, 18); /* Added box shadow */
+}
+
+.navBar:hover {
+    background-color: #769ce9;
+    box-shadow: 0 6px 12px rgb(237, 115, 115); /* Darker box shadow on hover */
+}
+
+.navBar .topNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navBar .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navBar .navItems a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.navBar .navItems a:hover {
+    color: #131212;
+}
+
+/* Welcome section styling */
+.welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-color: #e9ecef;
+    animation: fadeIn 2s ease;
+}
+
+.welcome h1 {
+    font-size: 2.5rem;
+    color: #343a40;
+    line-height: 1.2;
+}
+
+.welcome p {
+    color: #495057;
+    font-size: 1.1rem;
+}
+
+.welcomeRight img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    animation: slideInRight 1.5s ease-out;
+}
+
+/* About section styling */
+.about {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #ffffff;
+    animation: fadeIn 2s ease;
+}
+
+.aboutMain {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.aboutLeft img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.aboutRight {
+    max-width: 600px;
+}
+
+.aboutRight h1 {
+    color: #191b1d;
+}
+
+.aboutRight p {
+    color: #17191a;
+}
+
+/* Recipes section styling */
+.recipies {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    animation: fadeIn 2s ease;
+}
+
+.recipiesHead {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.recipiesHead h1 {
+    color: #343a40;
+}
+
+.recipiesHead p {
+    color: #495057;
+    margin-top: 0.5rem;
+}
+
+.recipieControl {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+.recipiesBox {
+    flex: 0 0 auto;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgb(98, 243, 127); /* Added box shadow */
+}
+
+.recipiesBox img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.imgDeSC, .imgDesc {
+    padding: 1rem;
     text-align: center;
 }
 
-.secondary {
-    color: rgba(245, 133, 93, 0.839);
+.imgDeSC h2, .imgDesc h2 {
+    color: #343a40;
+    margin: 0.5rem 0;
 }
 
-img-responsive {
+.imgDeSC p, .imgDesc p {
+    color: #495057;
+    margin: 0.5rem 0;
+}
+
+/* Status bar styling */
+.statusBar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f8f8f8;
+    color: #4a7af1;
+    padding: 1rem;
+    animation: fadeIn 2s ease;
+}
+
+.statusMain {
+    display: flex;
     width: 100%;
 }
 
-h2 {
-    
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    ;
+.status1, .status2, .status3 {
+    text-align: center;
+    flex: 1;
 }
 
-p {
-   
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(225, 246, 162);
+.status1 h1, .status2 h2, .status3 h1 {
+    margin: 1px;
+    font-size: 2rem;
 }
-button {
 
-    display: block;
-    margin: 0 auto;
+.status1 p, .status2 p, .status3 p {
+    margin: 1px;
+    font-size: 1rem;
+}
+
+/* Optional: Add some responsiveness */
+@media (max-width: 768px) {
+    .statusBar {
+        flex-direction: column;
+    }
+
+    .statusMain {
+        flex-direction: column;
+    }
+}
+
+/* Foods section styling */
+.foods {
+    padding: 2rem;
+    background-color: #ffffff;
+    animation: fadeIn 2s ease;
+}
+
+.foodsHead h1 {
+    text-align: center;
+    color: #343a40;
+}
+
+.foodsArea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.foodsControl {
+    flex: 1 1 calc(25% - 1rem);
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.foodsControl:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgb(223, 131, 213); /* Darker box shadow on hover */
+}
+
+.foodBox {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+    position: relative;
+    box-shadow: 0 5px 50px rgb(188, 130, 241); /* Added box shadow */
+}
+
+.foodBox:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgb(106, 223, 166); /* Darker box shadow on hover */
+}
+
+.foodContainerBox {
+    padding: 1rem;
+    text-align: center;
+}
+
+.foodContainerBox img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    transition: transform 0.3s ease;
+}
+
+.foodBox:hover .foodContainerBox img {
+    transform: scale(1.1);
+}
+
+.imgDeSC h2 {
+    color: #343a40;
+    margin: 0.5rem 0;
+}
+
+.imgDeSC p {
+    color: #495057;
+    margin: 0.5rem 0;
+}
+
+.imgDeSC button {
+    background-color: #007bff;
     color: #fff;
-    padding: 2.4%;
-    background-image: linear-gradient(to right, blue, rgb(243, 70, 70));
-    border-radius: 23px;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
     cursor: pointer;
-    border: transparent;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 0.5rem;
+    box-shadow: 0 4px 8px rgb(50, 236, 140); /* Added box shadow */
 }
 
-button:hover {
-    background-image: linear-gradient(to right, blue, rgb(243, 70, 70));
+.imgDeSC button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgb(245, 153, 153); /* Darker box shadow on hover */
 }
 
-button a {
-    text-decoration: none;
-    color: #fff;
-}
-
-/*  uiversal end*/
-
-/* for nav selection start*/
-.navBar {
-    
-    position: sticky;
-    top: 0;
-    background-color: rgba(139, 235, 234, 0.574);
-    ;
-    padding-bottom: 1%;
-}
-
-.topNav {
-    display: flex;
-    justify-content: space-between;
-    padding: 2%;
-    height: 10vh;
-}
-
-.navBar a {
-    text-decoration: none;
-    font-weight: 800;
-}
-
-.topNav.logo a {
-    color: #111;
-    font-weight: 900;
-    letter-spacing: 0.5em;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
-}
-
-.topNav .logo a span {
-    color: rgb(229, 101, 72)
-}
-
-.topNav .navItems {
-    margin-right: 1%;
-}
-
-.topNav .navItems a {
-    margin-right: 1em;
-    color: #111
-}
-
-.topNav .navItems a:hover {
-       color: rgb(0, 255, 26);
-}
-
-/* <!-- nav seclection end --> */
-.welcomeMain .welcomeLeft {
-    padding-top: 10%;
-    width: 50%;
-}
-
-.welcomeMain .welcomeRight {
-    width: 50%;
-}
-
-.welcomeMain .welcomeRight img {
-    max-width: 500%;
-    max-height: 100vh;
-}
-
-.welcomeLeft h1 {
-    font-size: 2em;
-    padding-bottom: 3%;
-    letter-spacing: 2px;
-    font-weight: 800;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-}
-
-.welcomeLeft h1 span{
-    color:rgb(248, 167, 227);
-}
-
-.welcomeLeft p{
-    color : gray;
-    padding-bottom: 7%;
-}
-/* welcome section end and about section start */
-
-section.about{
-    background-image: url('https://www.foodiesfeed.com/wp-content/uploads/2019/02/messy-pizza-on-a-black-table.jpg');
-    background:no-repeat;
-    background : cover;
-}
-
-.aboutMain{
-    display: flex;
-    margin:0.5%;
-    margin-top:10%;
-}
-
-.aboutMain .aboutLeft{
-    width: 50%;
-    margin-top: 10%;
-
-}
-
-.aboutMain .aboutRight{
-    width: 50%;
-    margin-top: 10%;
-}
-.aboutMain .aboutRight h1{
-    padding-bottom: 4%;
-}
-.aboutMain .aboutRight p{
-    padding-bottom: 10%;
-}
-
-.aboutMain .aboutLeft img {
-    max-width: 100%;
-    max-height: 80vh;
-    /* width: 100px; */
-}
-
-/* About Section End  start recipies section here*/
-
-.recipies{
-    margin-top : 5%;
-}
-
-.recipieControl{
-    display:flex;
-}
-
-.recBox{
-    padding: 5%;
-    margin: 5%;
-    box-shadow: 5px 10px 10px 5px rgb(220, 76, 36);
-    border-radius: 4%;
-}
-
-.recBox img{
-   animation: "slideInLeft" ;
-    max-width: 100%;
-    margin-bottom: 20%;
-}
-
-/* recipies section end   noe status bar start*/
-.statusBar{
-    margin : 4% 2%;
-    padding: 3%;
-    /* box-shadow: 10px 10px 10px 10px rgb(220, 76, 36) ; */
-    border-radius: 20px;
-}
-.statusMain{
-    display: flex;
-    justify-content: space-between;
-}
-
-/* Food Setcion End */
-/* footer Start */
-section.footer{
+/* Footer section styling */
+.footer {
+    text-align: center;
     background-color: #111;
     margin-top: 5%;
-
+    box-shadow: 0 -4px 8px rgb(170, 238, 157); /* Added box shadow to the top of the footer */
 }
-.footer h1 span{
+
+.footer h1 span {
     color: orange;
 }
-.footer h1{
+
+.footer h1 {
     color: gray;
     padding-top: 3%;
 }
 
-.footer h3{
-    color: #fff;
+.footer h3 {
+    color: #63ee63;
     padding: 2% 0;
 }
 
-
-
-.foodsControl{
-    display:flex;
+/* Styles for the button container */
+.button-container {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.foodBox{
-    display: flex;
-    padding: 5%;
-    margin: 5%;
-    box-shadow: 5px 10px 10px 5px rgb(220, 76, 36);
-    border-radius: 4%;
+/* Styles for the button */
+.button {
+    margin: 50px;
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgb(59, 201, 237); /* Added box shadow */
 }
 
-.foosBox img{
-    display: flex;
-    max-width: 100%;
-    margin-bottom: 20%;
+.button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker box shadow on hover */
+}
+
+.button:active {
+    background-color: #004085;
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgb(230, 15, 15); /* Lighter box shadow on active */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Advanced Animations */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes rotateIn {
+    0% {
+        opacity: 0;
+        transform: rotate(-200deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0);
+    }
+}
+
+/* Apply advanced animations */
+.foodBox {
+    animation: bounceIn 1s ease;
+}
+
+.welcomeRight img {
+    animation: rotateIn 1s ease;
+}
+
+.recipiesBox {
+    animation: bounceIn 1s ease;
+}
+
+.footer {
+    animation: fadeIn 1.5s ease-in-out;
 }
